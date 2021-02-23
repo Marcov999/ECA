@@ -16,7 +16,7 @@ Se $z \in K$, esiste $j$ t.c. $z \in D(p_j, r_{p_j}/2) \implies g_j(z)=1 \implie
 
 \begin{thm}
   (Teorema di Cauchy generalizzato) Sia $\Omega \subset \subset \mathbb{C}$ un dominio limitato t.c. $\partial\Omega$ sia un numero finito di curve di Jordan. Sia $u \in C^1(\overline{\Omega}, \mathbb{C})$, cioè esiste $U$ intorno aperto di $\overline{\Omega}$ su cui $u$ si estende di classe $C^1$.
-  Allora per ogni $w \in \Omega$ $\displaystyle u(w)=\int_{\partial \Omega} \dfrac{u(z)}{z-w}\diff z+\dfrac{1}{2\pi i}\int_{\Omega} \dfrac{\partial u/\partial\bar{z}}{z-w}\diff z \wedge \diff \bar{z}$.
+  Allora per ogni $w \in \Omega$ si ha $\displaystyle u(w)=\dfrac{1}{2\pi i}\int_{\partial \Omega} \dfrac{u(z)}{z-w}\diff z+\dfrac{1}{2\pi i}\int_{\Omega} \dfrac{\partial u/\partial\bar{z}}{z-w}\diff z \wedge \diff \bar{z}$.
 \end{thm}
 
 \begin{proof}
@@ -54,7 +54,7 @@ Se $z \in K$, esiste $j$ t.c. $z \in D(p_j, r_{p_j}/2) \implies g_j(z)=1 \implie
 \end{thm}
 
 \begin{proof}
-  Poniamo $\displaystyle u(w)=\dfrac{1}{2\pi i}\int \dfrac{\varphi(z)}{w-z} \diff\bar{z}\wedge\diff z$. È la $u$ data dal lemma \ref{misura} con $\mu(2\pi i)^{-1}\varphi(\diff\bar{z}\wedge\diff z)=-\dfrac{1}{\pi}\varphi\diff y\diff x$.
+  Poniamo $\displaystyle u(w)=\dfrac{1}{2\pi i}\int \dfrac{\varphi(z)}{w-z} \diff\bar{z}\wedge\diff z$. È la $u$ data dal lemma \ref{misura} con $\mu=(2\pi i)^{-1}\varphi(\diff\bar{z}\wedge\diff z)=-\dfrac{1}{\pi}\varphi\diff y\diff x$.
   $u \in \mathcal{O}(\mathbb{C}\setminus K)$. Facciamo un cambiamento di variabile: $\zeta=w-z \implies z=w-\zeta, \diff\zeta=-\diff z, \diff\bar{\zeta}=-\diff\bar{z}$.
   $u(w)=\dfrac{1}{2\pi i} \int_{\mathbb{C}} \dfrac{\varphi(w-\zeta)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta$. Siccome $1/\zeta$ è integrabile sui compatti di $\mathbb{C}$ e $\varphi \in C^k_{\text{\textsc{c}}}(\mathbb{C})$ possiamo derivare sotto il segno di integrale e le derivate sono continue, $u \in C^k(\mathbb{C})$.
   $\displaystyle \dfrac{\partial u}{\partial \bar{w}}(w)=\dfrac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial \varphi}{\partial \bar{z}}(w-\zeta)}{\zeta} \diff \bar{z}\wedge\diff z=-\dfrac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\varphi}{\partial\bar{z}}(z)}{z-w}\diff\bar{z}\wedge\diff z=\dfrac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\varphi}{\partial\bar{z}}(z)}{z-w}\diff z\wedge\diff\bar{z}=\dfrac{1}{2\pi i}\int_{\Omega} \dfrac{\frac{\partial\varphi}{\partial\bar{z}}(z)}{z-w}\diff z\wedge\diff\bar{z}$ dove $\Omega \subset \subset \mathbb{C}$ è un disco con $K \subset\subset \Omega$.
@@ -101,7 +101,7 @@ Se $z \in K$, esiste $j$ t.c. $z \in D(p_j, r_{p_j}/2) \implies g_j(z)=1 \implie
 
   (ii) $\implies$ (i) Sia $\mathcal{O}(\Omega)\restrict{K}=\{f\restrict{K} \mid f \in \mathcal{O}(\Omega)\}$. Vogliamo $\mathcal{O}(\Omega)\restrict{K}$ denso in $\mathcal{O}(K)$ rispetto a $\|\cdot\|_K$.
   Per il teorema di Hahn Banach, se $W$ è un sottospazio vettoriale di $V$ con $W, V$ spazi vettoriali topologici, allora $W$ è denso in $V$ $\iff$ l'unico elemento di $V^*$ che si annulla su $W$ è $0$ $\iff$ per ogni $\mu \in V^*$ t.c. $\mu\restrict{W}\equiv 0$, $\mu \equiv 0$.
-  Per avere la tesi serve quanto segue: se $\mu$ è una misura su $K$ (cioè un elemento del duale di $C^0(K)$) t.c. per ogni $f \in \mathcal{O}(K)\restrict{K}$ $\displaystyle \int f(z)\diff\mu(z)=0$ $(\star)$ allora per ogni $g \in \mathcal{O}(K)$ $\displaystyle \int g(z)\diff\mu(z)=0$.
+  Per avere la tesi serve quanto segue: se $\mu$ è una misura su $K$ (cioè un elemento del duale di $C^0(K)$) t.c. per ogni $f \in \mathcal{O}(\Omega)\restrict{K}$ $\displaystyle \int f(z)\diff\mu(z)=0$ $(\star)$ allora per ogni $g \in \mathcal{O}(K)$ $\displaystyle \int g(z)\diff\mu(z)=0$.
   Dato $\mu$ che soddisfa $(\star)$ definiamo $\varphi:\mathbb{C}\setminus K \longrightarrow \mathbb{C}$ ponendo $\displaystyle \varphi(w)=\int_{\mathbb{C}} \frac{1}{z-w}\diff\mu(z)=\int_K \frac{1}{z-w}\diff\mu(z)$.
   Abbiamo visto che, se $\varphi \in \mathcal{O}(\mathbb{C}\setminus K)$ e $w\not\in\Omega$, $(z-w)^{-1} \in \mathcal{O}(\Omega)$ e per $(\star)$ $\varphi\restrict{\mathbb{C}\setminus \Omega}\equiv 0$ $\implies$ $\varphi \equiv 0$ su ogni componente connessa di $\mathbb{C}\setminus K$ che interseca $\mathbb{C}\setminus\Omega$.
   Per ogni $n \ge 0$ $z^n \in \mathcal{O}(\Omega)$, dunque per $(\star)$ $\displaystyle \int z^n \diff\mu(z)=0$. Ma $(z-w)^{-1}$ si può sviluppare in una serie di potenze in $z$ che converge uniformemente su $K$ non appena $|w|>\|z\|_K$ $\implies$ $\varphi \equiv 0$ sulla componente connessa illimitata di $\mathbb{C}\setminus K$.
@@ -186,7 +186,7 @@ Se $z \in K$, esiste $j$ t.c. $z \in D(p_j, r_{p_j}/2) \implies g_j(z)=1 \implie
 \end{proof}
 
 \begin{cor}
-  Sia $\Omega \subset \mathbb{C}$ aperto. Ogni $f \in \mathcal{O}(\mathbb{C})$ è approssimabile uniformemente sui compatti con polinomi $\iff$ $\mathbb{C}\setminus \Omega$ non ha componenti connesse compatte.
+  Sia $\Omega \subset \mathbb{C}$ aperto. Ogni $f \in \mathcal{O}(\Omega)$ è approssimabile uniformemente sui compatti con polinomi $\iff$ $\mathbb{C}\setminus \Omega$ non ha componenti connesse compatte.
 \end{cor}
 
 \begin{proof}
@@ -198,7 +198,7 @@ Se $z \in K$, esiste $j$ t.c. $z \in D(p_j, r_{p_j}/2) \implies g_j(z)=1 \implie
 \end{proof}
 
 \begin{thm}
-  (Terzo teorema di Runge) Sia $\Omega \subset \mathbb{C}$ aperto, $\displaystyle \mathbb{C}\setminus \Omega=\bigcup_{\alpha}C_{\alpha}$ la decomposizione in componenti connesse. Sia $E \subset \mathbb{C}$ discreto con esattamente un punto in ciascuna $C_{\alpha}$ compatta. Allora ogni $f \in \mathcal{O}(\mathbb{C})$ può essere approssimata con funzioni razionali con poli in $E$.
+  (Terzo teorema di Runge) Sia $\Omega \subset \mathbb{C}$ aperto, $\displaystyle \mathbb{C}\setminus \Omega=\bigcup_{\alpha}C_{\alpha}$ la decomposizione in componenti connesse. Sia $E \subset \mathbb{C}$ discreto con esattamente un punto in ciascuna $C_{\alpha}$ compatta. Allora ogni $f \in \mathcal{O}(\Omega)$ può essere approssimata con funzioni razionali con poli in $E$.
 \end{thm}
 
 \begin{proof}

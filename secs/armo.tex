@@ -39,20 +39,20 @@
 \end{oss}
 
 \begin{prop} \label{prop_nuc}
-  $P_{a, \rho} \ge 0$, per ogni $z \in \partial D(a, \rho)$ $P_{a, \rho}(\cdot,\zeta) \in \mathcal{H}(D(a,\rho))$.
+  $P_{a, \rho} \ge 0$, per ogni $\zeta \in \partial D(a, \rho)$ $P_{a, \rho}(\cdot,\zeta) \in \mathcal{H}(D(a,\rho))$.
   Inoltre per ogni $h \in C^0(\partial D(a,\rho))$ e per ogni $\zeta_0 \in \partial D(a,\rho)$ $\displaystyle \lim_{z \longrightarrow \zeta_0} \int_0^{2\pi} P_{a,\rho}(z,a+\rho e^{i\theta})h(a+\rho e^{i\theta})\diff\theta=h(\zeta_0)$.
 \end{prop}
 
 \begin{proof}
   Per l'osservazione \ref{P01} possiamo supporre $a=0,\rho=1$. Allora $P_{0,1}(z,\zeta)=\dfrac{1}{2\pi}\dfrac{1-|z|^2}{|\zeta-z|^2}>0$. $P_{0,1}(\cdot,\zeta)$ è la parte reale di una funzione olomorfa $\implies$ è armonica.
-  $\displaystyle P_{0,1}(z, \zeta)=\dfrac{1}{2\pi}\mathfrak{Re}\left(\dfrac{1+\bar{\zeta}z}{1-\bar{\zeta}z}\right)=\dfrac{1}{2\pi}\mathfrak{Re}\left(1+\dfrac{2z\bar{z}}{1-z\bar{\zeta}}\right)=\dfrac{1}{2\pi}\mathfrak{Re}\left(1+2\sum_{n \ge 1} z^n\zeta^{-n}\right)$.
+  $\displaystyle P_{0,1}(z, \zeta)=\dfrac{1}{2\pi}\mathfrak{Re}\left(\dfrac{1+\bar{\zeta}z}{1-\bar{\zeta}z}\right)=\dfrac{1}{2\pi}\mathfrak{Re}\left(1+\dfrac{2z\bar{\zeta}}{1-z\bar{\zeta}}\right)=\dfrac{1}{2\pi}\mathfrak{Re}\left(1+2\sum_{n \ge 1} z^n\zeta^{-n}\right)$.
   $\displaystyle \int_0^{2\pi} P_{0,1}(z,e^{i\theta})\diff\theta=\dfrac{1}{2\pi}\mathfrak{Re}\left(2\pi+\sum_{n \ge 1} \left(\int_0^{2\pi} e^{-in\theta}\diff\theta \right)z^n\right)$.
   Poiché $n \ge 1$, $\displaystyle \int_0^{2\pi} e^{-in\theta}\diff\theta=0$, per cui $\displaystyle  \int_0^{2\pi} P_{0,1}(z,e^{i\theta})\diff\theta=1$.
   Sia $h \in C^0(\partial \mathbb{D})$, poniamo $\displaystyle T(z)=\int_0^{2\pi} P_{0,1}(z,e^{i\theta})h(e^{i\theta})\diff\theta-h(\zeta_0)=\int_0^{2\pi} P_{0,1}(z,e^{i\theta})(h(e^{i\theta})-h(e^{i\theta_0}))\diff\theta$.
   Fissiamo $\epsilon>0$; per uniforme continuità esiste $\delta>0$ t.c. $|h(e^{i\theta_1})-h(e^{i\theta_2})|<\epsilon$ se $|e^{i\theta_1}-e^{i\theta_2}|<\delta$. Sia $\displaystyle M=\sup_{\zeta \in \partial \mathbb{D}} |h(\zeta)|$.
   Allora $\displaystyle |T(z)|=\left|\int_{|e^{i\theta}-e^{i\theta_0}|<\delta} P_{0,1}(z,e^{i\theta})(h(e^{i\theta})-h(e^{i\theta_0}))\diff\theta+\int_{|e^{i\theta}-e^{i\theta_0}|\ge\delta} P_{0,1}(z,e^{i\theta})(h(e^{i\theta})-h(e^{i\theta_0}))\diff\theta\right| \le \epsilon\int_{|e^{i\theta}-e^{i\theta_0}|<\delta} P_{0,1}(z,e^{i\theta})\diff\theta+2M\int_{|e^{i\theta}-e^{i\theta_0}|\ge\delta} P_{0,1}(z,e^{i\theta})\diff\theta \le$ \\
   $\displaystyle \epsilon+2M\int_{|e^{i\theta}-e^{i\theta_0}|\ge\delta} P_{0,1}(z,e^{i\theta})\diff\theta$.
-  Da $P_{0,1}(z,\zeta)=\dfrac{1}{2\pi}\dfrac{1-|z|^2}{|\zeta-z|^2}$ otteniamo che il secondo integrale tende a $0$ quando $z \longrightarrow e^{i\theta_0}$, per cui $\displaystyle \lim_{z \longrightarrow \zeta_0} |T(z)| \le \epsilon$ per ogni $\epsilon$.
+  Da $P_{0,1}(z,\zeta)=\dfrac{1}{2\pi}\dfrac{1-|z|^2}{|\zeta-z|^2}$ otteniamo che il secondo integrale tende a $0$ quando $z \longrightarrow e^{i\theta_0}$, per cui $\displaystyle \limsup_{z \longrightarrow \zeta_0} |T(z)| \le \epsilon$ per ogni $\epsilon$, dunque $\displaystyle \lim_{z \longrightarrow \zeta_0} |T(z)|=0$.
 \end{proof}
 
 \begin{cor}

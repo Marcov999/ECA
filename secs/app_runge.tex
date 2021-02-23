@@ -50,8 +50,7 @@
 \end{proof}
 
 \begin{thm}
-  (Quarto teorema di Runge) Sia $\Omega \subseteq \mathbb{C}$ aperto, $K\subset\subset\Omega$ compatto t.c. $\widehat{K}_{\Omega}=K$. Sia $f \in \mathcal{O}(K)$ t.c. $f(z) \not=0$ per ogni $z \in K$. ù
-  Allora per ogni $\epsilon>0$ esiste $F \in \mathcal{O}(\Omega)$ con $F(z) \not=0$ per ogni $z \in \Omega$ e $\|F-f\|_K<\epsilon$.
+  (Quarto teorema di Runge) Sia $\Omega \subseteq \mathbb{C}$ aperto, $K\subset\subset\Omega$ compatto t.c. $\widehat{K}_{\Omega}=K$. Sia $f \in \mathcal{O}(K)$ t.c. $f(z) \not=0$ per ogni $z \in K$. Allora per ogni $\epsilon>0$ esiste $F \in \mathcal{O}(\Omega)$ con $F(z) \not=0$ per ogni $z \in \Omega$ e $\|F-f\|_K<\epsilon$.
 \end{thm}
 
 \begin{proof}
@@ -74,7 +73,7 @@
 \end{thm}
 
 \begin{proof}
-  Sia $\{K_{\nu}\}$ data dal lemma \ref{succ_K_nu}. Poniamo $\displaystyle F_{\nu}(z)=\prod_{s \in E \cap K_{\nu}} (z-a)^{k(a)}$. In particolare, $F_{\nu+1}/F_{\nu} \in \mathcal{O}(K_{\nu})$ e non si annulla in $K_{\nu}$.
+  Sia $\{K_{\nu}\}$ data dal lemma \ref{succ_K_nu}. Poniamo $\displaystyle F_{\nu}(z)=\prod_{a \in E \cap K_{\nu}} (z-a)^{k(a)}$. In particolare, $F_{\nu+1}/F_{\nu} \in \mathcal{O}(K_{\nu})$ e non si annulla in $K_{\nu}$.
   Sia $\displaystyle \delta_{\nu}=\min_{z \in K_{\nu}} \left|\frac{F_{\nu+1}(z)}{F_{\nu}(z)}\right|>0$.
   Sia $g_{\nu} \in \mathcal{O}(\Omega)$ data dal quarto teorema di Runge mai nulla in $\Omega$ t.c. $\displaystyle \left\|\frac{F_{\nu+1}}{F_{\nu}}-g_{\nu}\right\|_{K_{\nu}}<\frac{2^{-\nu-1}\delta_{\nu}}{1+2^{-\nu-1}}$
   $\implies$ per ogni $z \in K_{\nu}$ $\displaystyle |g_{\nu}(z)| \ge \left|\frac{F_{\nu+1}(z)}{F_{\nu}(z)}\right|-\frac{2^{-\nu-1}\delta_{\nu}}{1+2^{-\nu-1}} \ge \delta_v-\frac{2^{-\nu-1}\delta_{\nu}}{1+2^{-\nu-1}}=\frac{\delta_{\nu}}{1+2^{-\nu-1}}$.

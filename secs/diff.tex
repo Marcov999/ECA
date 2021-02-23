@@ -34,7 +34,7 @@ Un'altra differenza è l'equazione di Cauchy-Riemann non omogenea.
 
 \begin{ex}
   In una variabile abbiamo risolto $\bar{\partial}u=\psi$ con $\psi \in C^\infty_C(\mathbb{C})$. In generale, però, non c'è una soluzione $u \in C^\infty_C(\mathbb{C})$. Infatti, supponento che esista, $u$ avrebbe supporto compatto, per cui $supp(u) \subset D(0,R)$.
-  Allora $\displaystyle 0=\int_{\partial D(0,r)} u(z)\diff \zeta$, che per Gauss-Green o Stokes è uguale a $\displaystyle \int_{D(0,R)} \dfrac{\partial u}{\partial \bar{\zeta}} \diff\bar{\zeta}\wedge\diff\zeta=2i\int_{\partial D(0,R)} \psi \diff x\wedge\diff y$, che in generale è diverso da $0$. Quindi se $\displaystyle \int_{\mathbb{C}} \psi \diff x \diff y\not=0$ allora $u$ non può avere supporto compatto.
+  Allora $\displaystyle 0=\int_{\partial D(0,R)} u(\zeta)\diff \zeta$, che per Gauss-Green o Stokes è uguale a $\displaystyle \int_{D(0,R)} \dfrac{\partial u}{\partial \bar{\zeta}} \diff\bar{\zeta}\wedge\diff\zeta=2i\int_{D(0,R)} \psi \diff x\wedge\diff y$, che in generale è diverso da $0$. Quindi se $\displaystyle \int_{\mathbb{C}} \psi \diff x \diff y\not=0$ allora $u$ non può avere supporto compatto.
   Invece, se $n \ge 2$, $\psi_1, \dots, \psi_n \in C^\infty_C(\mathbb{C}^n)$, $\psi=\psi_1\diff \bar{z}_1+\dots+\psi_n\diff \bar{z}_n$ con condizioni di compatibilità ($\frac{\partial \psi_h}{\partial \bar{z}_k}=\frac{\partial \psi_k}{\partial \bar{z}_h}$), allora esiste $u \in C^\infty_C(\mathbb{C}^n)$ t.c. $\bar{\partial}u=\psi$.
   Le condizioni di compatibilità sono necessarie, infatti se $u$ è una soluzione $\dfrac{\partial \psi_j}{\partial \bar{z}_l}=\dfrac{\partial^2u}{\partial \bar{z}_l\partial \bar{z}_j}=\dfrac{\partial^2u}{\partial \bar{z}_j\partial \bar{z}_l}=\dfrac{\partial \psi_l}{\partial \bar{z}_j}$.
 \end{ex}
@@ -48,10 +48,10 @@ Per dimostrare il riultato appena enunciato useremo dei risultati che sappiamo e
 
 \begin{proof}
   Fissiamo $j\not=1$ e poniamo $\displaystyle u_j(z)=\frac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\psi_j(z_1, \dots, z_{j-1}, \zeta, z_{j+1}, \dots, z_n)}{\zeta-z_j}\diff\bar{\zeta}\wedge\diff\zeta$.
-  $\displaystyle \frac{\partial u_j}{\partial \bar{z}_l}(z)=\frac{1}{z\pi i}\frac{\partial}{\partial\bar{z}_l}\int_{\mathbb{C}} \dfrac{\psi_j(z_1, \dots, z_{j-1}, \zeta+z_j, z_{j+1}, \dots, z_n)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta=$\\
-  $\displaystyle =\frac{1}{z\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\psi_j}{\partial\bar{z}_l}(z_1, \dots, z_{j-1}, \zeta+z_j, z_{j+1}, \dots, z_n)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta$.
-  Dalle condizioni di compatibilità, è uguale a $\displaystyle \frac{1}{z\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\psi_l}{\partial\bar{z}_j}(z_1, \dots, z_{j-1}, \zeta+z_j, z_{j+1}, \dots, z_n)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta=$ \\
-  $\displaystyle =\frac{1}{z\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\psi_l}{\partial\bar{z}_j}(z_1, \dots, z_{j-1}, \zeta, z_{j+1}, \dots, z_n)}{\zeta-z_j}\diff\bar{\zeta}\wedge\diff\zeta$.
+  $\displaystyle \frac{\partial u_j}{\partial \bar{z}_l}(z)=\frac{1}{2\pi i}\frac{\partial}{\partial\bar{z}_l}\int_{\mathbb{C}} \dfrac{\psi_j(z_1, \dots, z_{j-1}, \zeta+z_j, z_{j+1}, \dots, z_n)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta=$\\
+  $\displaystyle =\frac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\psi_j}{\partial\bar{z}_l}(z_1, \dots, z_{j-1}, \zeta+z_j, z_{j+1}, \dots, z_n)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta$.
+  Dalle condizioni di compatibilità, è uguale a $\displaystyle \frac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\psi_l}{\partial\bar{z}_j}(z_1, \dots, z_{j-1}, \zeta+z_j, z_{j+1}, \dots, z_n)}{\zeta}\diff\bar{\zeta}\wedge\diff\zeta=$ \\
+  $\displaystyle =\frac{1}{2\pi i}\int_{\mathbb{C}} \dfrac{\frac{\partial\psi_l}{\partial\bar{z}_j}(z_1, \dots, z_{j-1}, \zeta, z_{j+1}, \dots, z_n)}{\zeta-z_j}\diff\bar{\zeta}\wedge\diff\zeta$.
   Dato che $supp(\psi_l)$ è compatto, possiamo limitare l'integrale a un disco abbastanza grande da contenerlo tutto e avere $\psi_l$ nulla sul bordo di tale disco. Allora per il teorema di Cauchy generalizzato l'ultimo integrale viene proprio $\psi_l(z)$. $\psi_l$ a supporto compatto $\implies$ $\dfrac{\partial u_j}{\partial \bar{z}_l}$ a supporto compatto $\implies$ $\dfrac{\partial u_j}{\partial \bar{z}_l}=0$ per ogni $l$ se $\|z\|>>1$ $\implies$ $u_j(z)$ è olomorfa per $\|z\|>>1$.
   Ma $\psi_j(z)\equiv 0$ non appena $|z_1|>>1$ (ricordiamo che $j\not=1$) $\implies$ $u_j(z) \equiv 0$ non appena $|z_1|>>1$ (per definizione), dunque per il principio di identità $u_j(z) \equiv 0$ se $\|z\|>1$ $\implies$ $supp(u_j)$ è compatto.
 \end{proof}

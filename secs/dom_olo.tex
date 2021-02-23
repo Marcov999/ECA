@@ -1,6 +1,6 @@
 \begin{defn}
-  Sia $\Omega \subset \mathbb{C}^n$ un dominio. $P \in \partial \Omega$ è \textit{essenziale} se esiste $u \in \mathcal{O}(\Omega)$ t.c. per ogni intorno aperto connesso $\Omega_2$ di $P$ e per ogni aperto connesso $\Omega_1 \subseteq \Omega \cap \Omega_2$ con $\Omega_1\not=\emptyset,\Omega$ non esiste $u_2 \in \mathcal{O}(\Omega)$ con $u_2\restrict{\Omega_1}=u\restrict{\Omega_1}$.
-  Diremo che $\Omega$ è un \textsc{dominio di olomorfia} se ogni $P \in \partial D$ è essenziale.
+  Sia $\Omega \subset \mathbb{C}^n$ un dominio. $P \in \partial \Omega$ è \textit{essenziale} se esiste $u \in \mathcal{O}(\Omega)$ t.c. per ogni intorno aperto connesso $\Omega_2$ di $P$ e per ogni aperto connesso $\Omega_1 \subseteq \Omega \cap \Omega_2$ con $\Omega_1\not=\emptyset,\Omega$ non esiste $u_2 \in \mathcal{O}(\Omega_2)$ con $u_2\restrict{\Omega_1}=u\restrict{\Omega_1}$.
+  Diremo che $\Omega$ è un \textsc{dominio di olomorfia} se ogni $P \in \partial \Omega$ è essenziale.
 \end{defn}
 
 \begin{defn}
@@ -77,7 +77,7 @@ Diremo che $\Omega$ è \textit{$\mathcal{F}$-convesso} se e solo se per ogni $K 
 \end{thm}
 
 \begin{proof}
-  (i) $\implies$ (ii) è ovvia (basta prendere $h$ per tutti i $p \in \partial\Omega$). (iv) $\implies$ (vii) è ovvia. (vii) $\implies$ (ix) è ovvia (basta dividere $f$ per $\displaystyle \sup_{z \in K} \frac{|f(z)|}{\mu_\Omega(z)}$). (ix) $\implies$ (vii) è ovvia (basta prendere $f \equiv 1$). (iv) $\implies$ (vi) $\implies$ (v) sono analoghe a (vii) $\implies$ (xi) $\implies$ (viii).
+  (i) $\implies$ (ii) è ovvia (basta prendere $h$ per tutti i $p \in \partial\Omega$). (iv) $\implies$ (vii) è ovvia. (vii) $\implies$ (ix) è ovvia (basta dividere $f$ per $\displaystyle \sup_{z \in K} \frac{|f(z)|}{\mu_\Omega(z)}$). (ix) $\implies$ (vii) è ovvia (basta prendere $f \equiv 1$). (iv) $\implies$ (vi) $\implies$ (v) sono analoghe a (vii) $\implies$ (ix) $\implies$ (viii).
   (v) $\implies$ (viii) è ovvia. Per concludere mostriamo che (ii) $\implies$ (viii) $\implies$ (iii) $\implies$ (i) $\implies$ (iv).
 
   (ii) $\implies$ (viii) Poniamo $\mu=\|\cdot\|_{\infty}$. Supponiamo, per assurdo, che (viii) non valga: allora esiste $K \subset\subset \Omega$ compatto t.c. $\mu_{\Omega}(\hat{K}_\Omega)<\mu_\Omega(K)$. Scegliamo $\mu_\Omega(\hat{K}_\Omega)< \delta_1<\delta_2<\mu_\Omega(K)$.
@@ -88,7 +88,7 @@ Diremo che $\Omega$ è \textit{$\mathcal{F}$-convesso} se e solo se per ogni $K 
 
   (viii) $\implies$ (iii) $K \subset\subset \Omega$ compatto $\iff$ $K$ è chiuso, limitato e $\mu_\Omega(K)>0$. Se $K \subset\subset \Omega$ compatto, allora $\hat{K}_\Omega$ è chiuso, limitato e, per (viii), $\mu_\Omega(\hat{K}_\Omega)=\mu_\Omega(K)>0$ $\implies$ $\hat{K}_\Omega \subset\subset \Omega$ compatto.
 
-  (iii) $\implies$ (i) Sia $\{w_k\}_{j \in \mathbb{N}^*} \subset \Omega$ una successione ovunque densa e che ripete ogni punto infinite volte. Per ogni $j$ sia $P_j=P(w_j,r_j)$ il polidisco di centro $w_j$ più grande contenuto in $\Omega$ ($\iff$ $P(w_j,r_j) \subset \Omega$ ma $\overline{P(w_j,r_j)}\cap\partial\Omega\not=\emptyset$). In particolare, $P_j$ non è $\subset\subset\Omega$.
+  (iii) $\implies$ (i) Sia $\{w_j\}_{j \in \mathbb{N}^*} \subset \Omega$ una successione ovunque densa e che ripete ogni punto infinite volte. Per ogni $j$ sia $P_j=P(w_j,r_j)$ il polidisco di centro $w_j$ più grande contenuto in $\Omega$ ($\iff$ $P(w_j,r_j) \subset \Omega$ ma $\overline{P(w_j,r_j)}\cap\partial\Omega\not=\emptyset$). In particolare, $P_j$ non è $\subset\subset\Omega$.
   Sia $\{K_j\}$ una successione di compatti che invade $\Omega$, cioè $K_j \subset\subset \Omega$ compatto, $K_j \subset \mathop {K_{j+1}}\limits^ \circ$ e $\displaystyle \bigcup_j K_j=\Omega$.
   (iii) $\implies$ $\widehat{(K_j)}_\Omega \subset\subset \Omega$ $\implies$ esiste $z_j \in P_j\setminus\widehat{(K_j)}_\Omega$ $\implies$ esiste $h_j \in \mathcal{O}(\Omega)$ t.c. $|h_j(z_j)|>\|h_j\|_{K_j}$. Possiamo suppore $h_j(z_j)=1$ e (a meno di sostituire $h_j^{M_j}$ con $M_j>>1$) possiamo supporre $\|h_j\|_{K_j}<2^{-j}$.
   Poniamo $\displaystyle h(z)=\prod_{j=1}^{+\infty} (1-h_j(z))^j$. $h \in \mathcal{O}(\Omega)$ perché $\displaystyle \sum_j \frac{j}{2^j}<+\infty$. Inoltre $h \not\equiv 0$ perché non lo è su $K_1$. Ogni $P_j$ contiene infiniti $z_l$ che si accumulano a $z_j^0 \in \overline{P_j}$.
@@ -141,7 +141,7 @@ Diremo che $\Omega$ è \textit{$\mathcal{F}$-convesso} se e solo se per ogni $K 
 \begin{proof}
   Sia $K \subset\subset \Omega$ compatto. Vogliamo mostrare che $\hat{K}_\Omega \subset\subset \Omega$ e allora la tesi seguirà dal teorema \ref{car_dom_olo}. Per ogni $w \in K$ esiste un intorno $w \in U_w \subset \Omega$ e $\zeta^w \in \Omega$ t.c. $|z_j| \le |\zeta_j^w|$ per ogni $z \in U_w$.
   $K$ compatto $\implies$ esistono $\zeta^1, \dots, \zeta^k \in \Omega$ t.c. $\displaystyle K \subset \bigcup_{l=1}^k \{|z_j| \le |\zeta_j^l| \forall j\}=W \subset\subset \Omega$. Possiamo asumere $\zeta_j^l \not=0$ per ogni $l,j$. Sia $z \in \hat{K}_\Omega$, vogliamo $z \in W$.
-  A meno di permutare le coordinate possiamo supporre $z_1= \dots, z_m \not=0, z_{m+1}=\dots=z_n=0$ per qualche $1 \le m \le n$ (ovviamente $0 \in W$).
+  A meno di permutare le coordinate possiamo supporre $z_1, \dots, z_m \not=0, z_{m+1}=\dots=z_n=0$ per qualche $1 \le m \le n$ (ovviamente $0 \in W$).
   Per definizione di $\hat{K}_\Omega$ si ha che $\displaystyle |z_1^{\alpha_1}\dots z_m^{\alpha_m}| \le \sup_{w \in K} |w_1^{\alpha_1}\dots w_m^{\alpha_m}| \le \max_{1 \le l \le k} |(\zeta_1^l)^{\alpha_1}\dots(\zeta_m^l)^{\alpha_m}|$ $(*)$.
   Poniamo $\nu_j=\alpha_j/|\alpha|$. $\nu_j \in \mathbb{Q}^+\cup\{0\}$ con $\displaystyle \sum_{j=1}^n \nu_j=1$. Prendendo il logaritmo e dividendo per $|\alpha|$ a entrambi i membri di $(*)$ otteniamo $\displaystyle \sum_{j=1}^m \nu_j\log{|z_j|} \le \max_l \sum_{j=1}^m \nu_j\log{|\zeta_j^l|}$ $(**)$.
   Per continuità questo vale per ogni $\nu_j \in \mathbb{R}^+\cup\{0\}$ t.c. $\displaystyle \sum_j \nu_j=1$.
