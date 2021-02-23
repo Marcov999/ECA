@@ -171,12 +171,13 @@ Se $z \in K$, esiste $j$ t.c. $z \in D(p_j, r_{p_j}/2) \implies g_j(z)=1 \implie
   (v) $\implies$ (i) Dato $K \subset \Omega_1$, poniamo $K'=\widehat{K}_{\Omega_2} \cap \Omega_1$ e $K''=\widehat{K}_{\Omega_2} \setminus \Omega_1$. $K' \cap K''=\emptyset, K \subseteq K'$, $K', K''$ sono compatti e $\widehat{K}_{\Omega_2}=K'\cup K''$.
   Sia ora $f \in \mathcal{O}(\Omega_1), \epsilon>0$. Applichiamo il primo teorema di Runge a $\widehat{K}_{\Omega_2}$ e $\tilde{f}$ t.c. $\tilde{f}\restrict{K'}\equiv f$ e $\tilde{f}\equiv 1$ in un intorno di $K''$ $\implies$ esiste $g \in \mathcal{O}(\Omega_2)$ t.c. $\|g-f\|_K \le \|g-f\|_{K'} \le \|g-f\|_{\widehat{K}_{\Omega_2}}<\epsilon$.
 
-  (v) $\implies$ (iii) Dato $K \subset \Omega_1$, definiamo $K'$ e $K''$ come sopra. Applichiamo il primo teorema di Runge a $f\restrict{K} \equiv 0, f\restrict{K''}\equiv 1$.
-  Se $z_0 \in K''$ esiste $F \in \mathcal{O}(\Omega_2)$ t.c. $\|F\|_K<1/2$ e $\|F-1\|_{K''}<1/2 \implies |F(z_0)|>1/2>\|F\|_K \implies z_0 \not\in \widehat{K}_{\Omega_2}$, assurdo $\implies K''=\emptyset \implies \widehat{K}_{\Omega_2} \subseteq \Omega_1 \implies \widehat{K}_{\Omega_2}=\widehat{K}_{\Omega_1}$.
-
   (i) $\implies$ (iv) È chiaro che $\widehat{K}_{\Omega_1} \subseteq \widehat{K}_{\Omega_2} \cap \Omega_1$. Sia $z_0 \in \Omega_1 \setminus \widehat{K}_{\Omega_1}$.
   Allora esistono $f \in \mathcal{O}(\Omega_1)$, $\epsilon>0$ t.c. $|f(z_0)|>\|f\|_K+\epsilon$. Sia $F \in \mathcal{O}(\Omega_2)$ t.c. $\|F-f\|_{K \cup \{z_0\}}<\epsilon/2$.
   Allora $|F(z_0)|>|f(z_0)|-\epsilon/2>\|f\|_K+\epsilon/2>\|F\|_K \implies z_0 \not\in \widehat{K}_{\Omega_2} \implies$ (iv).
+
+  (v) $\implies$ (iii) Dato $K \subset \Omega_1$, definiamo $K'$ e $K''$ come sopra. Applichiamo il primo teorema di Runge a $f\restrict{K} \equiv 0, f\restrict{K''}\equiv 1$.
+  Se $z_0 \in K''$ esiste $F \in \mathcal{O}(\Omega_2)$ t.c. $\|F\|_K<1/2$ e $\|F-1\|_{K''}<1/2 \implies |F(z_0)|>1/2>\|F\|_K \implies z_0 \not\in \widehat{K}_{\Omega_2}$, assurdo $\implies K''=\emptyset \implies \widehat{K}_{\Omega_2} \subseteq \Omega_1$.
+  Abbiamo visto che (v) $\implies$ (i) $\implies$ (iv), che insieme a quanto appena trovato dà $\widehat{K}_{\Omega_2}=\widehat{K}_{\Omega_1}$.
 
   (ii) $\implies$ (iii) sia $U$ una componente connessa di $\Omega_2 \setminus K$ relativamente compatta in $\Omega_2$. Siccome $\partial U \subseteq K \subset \Omega_1$, $L=U \setminus \Omega_1$ è compatto in $\Omega_2$.
   Per assurdo, $a \in L$ e sia $C$ la componente connessa di $\Omega_2 \setminus \Omega_1$ che contiene $a$ $\implies$ $U \cup C$ è connesso; ma $U$ è una componente connessa di $\Omega_2 \setminus K \supset \Omega_2 \setminus \Omega_1 \implies U \supseteq C \implies C$ è relativamente compatto in $\Omega_2$ contro (ii), assurdo $\implies$ $L=\emptyset$ $\implies$ $U \subset \Omega_1$.
